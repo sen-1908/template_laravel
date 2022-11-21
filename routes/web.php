@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\LikeController;
+use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,7 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [LikeController::class, 'index']);
-
-Route::post('/like/{postId}',[LikeController::class,'store']);
-Route::post('/unlike/{postId}',[LikeController::class,'destroy']);
+Route::get('/', [PostController::class, 'index']);
